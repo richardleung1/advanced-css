@@ -11,3 +11,20 @@ function createNewElement(tagName, text) {
     newElement.textContent = text;
     return newElement;
 }
+
+// $(function () {
+//     $('[data-toggle="popover"]').popover()
+// });
+
+const card = createNewElement('div', 'My new card');
+card.classList.add('card');
+console.log(card);
+
+const cardText = createNewElement('p', 'Here is my description');
+cardText.classList.add('card-title');
+card.appendChild(cardText);
+
+const link = createNewElement('a', 'General Assembly');
+link.classList.add('btn', 'btn-primary');
+link.setAttribute('href', 'https://generalassemb.ly/')
+card.appendChild(link);
